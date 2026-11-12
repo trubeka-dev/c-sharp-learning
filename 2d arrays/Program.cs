@@ -16,6 +16,7 @@ namespace _2d_arrays
                 {5, 18, 20, 3 },
                 {6, 12, 13, 10 }
             };
+            PrintMatrix(nums);
             for (int i = 0; i < nums.GetLength(0); i++)
             {
                 int rowMax = nums[i, 0];
@@ -27,6 +28,18 @@ namespace _2d_arrays
                     }
                 }
                 Console.WriteLine($"Макс число {i} строки - {rowMax}. ");
+            }
+
+            void PrintMatrix(int[,] mat)
+            {
+                for (int i = 0; i < mat.GetLength(0); i++)
+                {
+                    for (int j = 0;j < mat.GetLength(1); j++ )
+                    {
+                        Console.Write($"{ mat[i, j] + " ", 4}");
+                    }
+                    Console.WriteLine();
+                }
             }
         }
     }
